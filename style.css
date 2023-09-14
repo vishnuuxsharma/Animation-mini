@@ -1,0 +1,225 @@
+* {
+margin : 0;
+padding: 0;
+font-family: verdana ;
+box-sizing: border-box;
+}
+
+html,body {
+width: 100%;
+height: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #fff;
+}
+
+.left {
+    height: 100%;
+    width: 50%;
+    position: relative;
+   
+}
+
+.left img {
+    position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0%;
+   object-fit: cover;
+   z-index: 99;
+   animation-name: abc;
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+   animation-delay: 0.5s;
+   opacity: 0;
+   overflow: hidden;
+}
+
+.nav {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+    position: relative;
+    z-index: 999;
+    color: #fff;
+}
+
+.nav h1 {
+    font-family: ogg;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.nav h1 i {
+    font-size: 23px;
+}
+
+.left > h1 {
+  position: absolute;
+  right: 2%;
+  bottom: 3%;
+  color: #fff;
+  overflow: hidden;
+  z-index: 99;
+  font-size: 80px;  
+  font-family: voyage;
+  opacity: 0;
+  text-align: right;
+  line-height: 78px;
+  animation-name: magic;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+
+}
+
+
+.right {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    
+}
+
+#img1 {
+    height: 230px;
+    width: 190px;
+    object-fit: cover;
+    position: absolute;
+    top:5px;
+    left: 50%;
+    transform: translate(-50% , 0);
+    animation-name: move;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+#img2 {
+    height: 345px;
+    width: 260px;
+    object-fit: cover;
+    position: absolute;
+    left: 10%;
+    top: 32%;
+    transform: translate(0 , -50%);
+    animation-name: move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#img3 {
+    height: 230px;
+    width: 190px;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translate(-50% , 0);
+    animation-name: move;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.right> h1 {
+    font-size: 50px;
+    position: absolute;
+    font-family: 'Klee One', cursive;
+    rotate: -90deg;
+    right: -10%;
+    top: 25%;
+    user-select: none;
+
+    animation-name: move;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: forwards;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #b9b5b515;
+    z-index: 9;
+    overflow: hidden;
+    animation-name: overlay;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  
+}
+
+
+@keyframes move {
+    0% {
+        transform: translate(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes overlay {
+    0% {
+       width: 0%;
+        opacity: 0;
+        transform: translate(100%);
+        animation: reverse;
+    }
+
+    100% {
+        transform: translate(0);
+        width: 100%;
+        opacity: 1;
+        animation: reverse;
+    }
+}
+
+@keyframes abc {
+
+    0% {
+        transform: rotate(20deg) scale(1.2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes magic {
+    
+    0% {
+        transform: translate(100%);
+        opacity: 0;
+        color: rgba(63, 61, 61, 0.274);
+    }
+
+    50%{
+        transform: translate(0%);
+        opacity: 0.5;
+        color: rgba(63, 61, 61, 0.623);
+    }
+    
+
+    100% {
+        transform: translate(0);
+        opacity: 1;
+        color: #fff;
+    }
+}

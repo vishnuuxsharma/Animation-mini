@@ -1,0 +1,13 @@
+
+*** important notes ***
+   
+   (cover property image for image)
+
+for img we can use this 
+ object-fit: cover; 
+ for cover img size in div size .. 
+
+
+ (user cant select that element )
+
+ user-select: none;
